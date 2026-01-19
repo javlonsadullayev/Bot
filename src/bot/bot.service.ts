@@ -31,7 +31,6 @@ export class BotService implements OnModuleInit {
       const chatId = msg.chat.id;
       const text = msg.text;
 
-      // Agar /start bo'lmasa va foydalanuvchi product nomini kiritmagan bo'lsa
       if (!this.users[chatId]) return;
 
       if (!this.users[chatId].name) {
@@ -55,7 +54,6 @@ export class BotService implements OnModuleInit {
             `Narx: ${this.users[chatId].price}`
         );
 
-        // Ma'lumotni saqlash yoki keyingi bosqich
         delete this.users[chatId];
       }
     });
